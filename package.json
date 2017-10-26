@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/KwonHM/IJustWantGoHome#readme",
   "dependencies": {
-    "express": "2.3.11",
     "eslint": "^4.9.0"
   },
   "devDependencies": {
