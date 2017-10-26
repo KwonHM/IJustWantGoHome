@@ -1,0 +1,22 @@
+{
+  "name": "ijwgh",
+  "version": "0.1.0",
+  "description": "I Just Want Go Home",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'is it working well?'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KwonHM/IJustWantGoHome.git"
+  },
+  "author": "murikubo,lunch1019,KwonHM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KwonHM/IJustWantGoHome/issues"
+  },
+  "homepage": "https://github.com/KwonHM/IJustWantGoHome#readme",
+  "dependencies": {
+    "express": "2.3.11"
+  }
+}
