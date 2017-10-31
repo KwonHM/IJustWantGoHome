@@ -1,3 +1,4 @@
+let temp = 0;
 
 function printClock() {
     
@@ -35,31 +36,44 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 
 function blink() {
     let color = $('body').css('color');
-    if(color == 'rgb(255, 0, 0)') {
+    if(color == 'rgb(255, 0, 0)' && temp == 0) {
         $('body').css('color','orange');
-        $('body').css('text-align','left');
-    } else if(color == 'rgb(255, 165, 0)') {
+    } else if (color == 'rgb(255, 165, 0)') {
         $('body').css('color','yellow');
-    } else if(color == 'rgb(255, 255, 0)') {
+    } else if (color == 'rgb(255, 255, 0)') {
         $('body').css('color','green');
-        $('body').css('text-align','center');
-    } else if(color == 'rgb(0, 128, 0)') {
+    } else if (color == 'rgb(0, 128, 0)') {
         $('body').css('color','blue');
-    } else if(color == 'rgb(0, 0, 255)') {
+    } else if (color == 'rgb(0, 0, 255)') {
         $('body').css('color','navy');
-        $('body').css('text-align','right');
-    } else if(color == 'rgb(0, 0, 128)') {
+    } else if (color == 'rgb(0, 0, 128)') {
         $('body').css('color','purple');
     } else {
         $('body').css('color','red');
-        $('body').css('text-align','center');
     }
     setTimeout('blink()', 70);
+}
+
+function move() {
+    let align = $('body').css('text-align');
+    if(align == 'left') {
+        $('body').css('text-align','center');
+        temp = 1;
+    } else if(align == 'center' && temp == 1) {
+        $('body').css('text-align','right');
+        temp = 0;
+    } else if(align == 'right') {
+        $('body').css('text-align','center');
+    } else {
+        $('body').css('text-align','left');
+    }
+    setTimeout('move()', 50);
 }
 
 
 $(document).ready(function() {
     $('body').onload = printClock();
     $('body').onload = blink();
+    $('body').onload = move();
     // Handler for .ready() called.
 });
