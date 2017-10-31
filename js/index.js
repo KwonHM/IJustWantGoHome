@@ -34,15 +34,19 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 }
 
 function blink() {
-    if($('body').css('color','red')) {
+    let color = $('body').css('color');
+    console.log(color);
+    if(color == 'rgb(255, 0, 0)') {
         $('body').css('color','blue');
     } else {
         $('body').css('color','red');
     }
+    setTimeout('blink()', 50);
 }
+
 
 $(document).ready(function() {
     $('body').onload = printClock();
+    $('body').onload = blink();
     // Handler for .ready() called.
-    setTimeout(blink(), 1000);
 });
