@@ -3,14 +3,9 @@
     text-align: center;    
 }
 body {
-<<<<<<< HEAD
-    background-image: 'https://github.com/skyaria2016/table/blob/master/img_theme/newgame/newgame.png?raw=true';
-}
-=======
     /*background: skyblue;*/
     color: red;
     font-size: 40px;
     perspective: 800px;
     background-image: url("https://github.com/skyaria2016/table/blob/master/img_theme/newgame/newgame.png?raw=true");
 }
->>>>>>> 4049a19c366e59c92b80a4106cddae59a17de016
