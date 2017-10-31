@@ -38,18 +38,22 @@ function blink() {
     console.log(color);
     if(color == 'rgb(255, 0, 0)') {
         $('body').css('color','orange');
+        $('body').css('text-align','left');
     } else if(color == 'rgb(255, 165, 0)') {
         $('body').css('color','yellow');
     } else if(color == 'rgb(255, 255, 0)') {
         $('body').css('color','green');
+        $('body').css('text-align','center');
     } else if(color == 'rgb(0, 128, 0)') {
         $('body').css('color','blue');
     } else if(color == 'rgb(0, 0, 255)') {
         $('body').css('color','navy');
+        $('body').css('text-align','right');
     } else if(color == 'rgb(0, 0, 128)') {
         $('body').css('color','purple');
     } else {
         $('body').css('color','red');
+        $('body').css('text-align','center');
     }
     setTimeout('blink()', 70);
 }

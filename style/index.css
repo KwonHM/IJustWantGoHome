@@ -1,9 +1,6 @@
-.center
-{
-    text-align: center;    
-}
 body {
     /*background: skyblue;*/
+    text-align: center;   
     color: red;
     font-size: 40px;
     perspective: 800px;
