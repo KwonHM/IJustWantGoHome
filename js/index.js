@@ -32,3 +32,8 @@
           }
           return zero + num; //인라인 함수 하지 말기
     }
+$(window).on("load", function(){
+    let body = document.getElementsByTagName("BODY")[0];
+    body.onload=printClock();
+  // Handler when all assets (including images) are loaded
+});
