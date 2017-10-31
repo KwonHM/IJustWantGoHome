@@ -32,7 +32,31 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
         }
         return zero + num; //인라인 함수 하지 말기
 }
+
+function blink() {
+    let color = $('body').css('color');
+    console.log(color);
+    if(color == 'rgb(255, 0, 0)') {
+        $('body').css('color','orange');
+    } else if(color == 'rgb(255, 165, 0)') {
+        $('body').css('color','yellow');
+    } else if(color == 'rgb(255, 255, 0)') {
+        $('body').css('color','green');
+    } else if(color == 'rgb(0, 128, 0)') {
+        $('body').css('color','blue');
+    } else if(color == 'rgb(0, 0, 255)') {
+        $('body').css('color','navy');
+    } else if(color == 'rgb(0, 0, 128)') {
+        $('body').css('color','purple');
+    } else {
+        $('body').css('color','red');
+    }
+    setTimeout('blink()', 70);
+}
+
+
 $(document).ready(function() {
     $('body').onload = printClock();
+    $('body').onload = blink();
     // Handler for .ready() called.
-    });
+});
