@@ -35,7 +35,6 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
 
 function blink() {
     let color = $('body').css('color');
-    console.log(color);
     if(color == 'rgb(255, 0, 0)') {
         $('body').css('color','orange');
     } else if(color == 'rgb(255, 165, 0)') {
