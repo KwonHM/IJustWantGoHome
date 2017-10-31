@@ -1,5 +1,11 @@
+@font-face { 
+    font-family : 'SeoulNamsanM';
+    src : url('font/SeoulNamsanM_1.woff'); 
+}
+
 body {
     /*background: skyblue;*/
+    font-family : 'SeoulNamsanM';
     text-align: center;   
     color: red;
     font-size: 40px;
