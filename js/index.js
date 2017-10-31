@@ -32,7 +32,17 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
         }
         return zero + num; //인라인 함수 하지 말기
 }
+
+function blink() {
+    if($('body').css('color','red')) {
+        $('body').css('color','blue');
+    } else {
+        $('body').css('color','red');
+    }
+}
+
 $(document).ready(function() {
     $('body').onload = printClock();
     // Handler for .ready() called.
-    });
+    setTimeout(blink(), 1000);
+});
