@@ -58,3 +58,10 @@ input[type="number"]::-webkit-inner-spin-button {
     text-align: left;
     width: 100%;
 }
+
+.time_input {
+    border: 0px;
+    border-radius: 3px;
+    margin: 0px 3px;
+    width: 30px;
+}
