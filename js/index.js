@@ -10,7 +10,7 @@ function printClock() {
     var currentMinute = addZeros(currentDate.getMinutes() ,2);
     var currentSeconds =  addZeros(currentDate.getSeconds(),2);
     var want_time = parseInt(document.getElementById('want_time').value);
-    var want_time_minit = parseInt(document.getElementById('want_time_minit').value); //곧 쓸 분 단위 변수
+    // var want_time_minit = parseInt(document.getElementById('want_time_minit').value); //곧 쓸 분 단위 변수
 
 
     if(currentHours >= (want_time-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
