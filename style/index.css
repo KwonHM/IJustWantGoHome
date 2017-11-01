@@ -53,3 +53,8 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+#party_time {
+    text-align: left;
+    width: 100%;
+}

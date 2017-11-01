@@ -51,7 +51,7 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
         return zero + num;
 }
 
-function blink() {
+function blink(stop) {
     let color = $('body').css('color');
     if(color == 'rgb(255, 0, 0)' && temp == 0) {
         $('body').css('color','orange');
@@ -68,10 +68,14 @@ function blink() {
     } else {
         $('body').css('color','red');
     }
-    setTimeout('blink()', 70);
+    if(stop == 1) {
+        return;
+    } else {
+        setTimeout('blink()', 50);
+    }
 }
 
- function move() {
+ function move(stop) {
     let align = $('body').css('text-align');
     if(align == 'left') {
         $('body').css('text-align','center');
@@ -84,14 +88,27 @@ function blink() {
     } else {
         $('body').css('text-align','left');
     }
-    setTimeout('move()', 50);
+    if(stop == 1) {
+        return;
+    } else {
+        setTimeout('move()', 50);
+    }
 }
 
 
 $(document).ready(function() {
     $('body').onload = printClock();
-    $('body').onload = blink();
-    //$('body').onload = move();
+    $('#party_time').click(function() {
+        if(temp == 1) {
+            blink(1);
+            move(1);
+            temp = 0;
+        } else {
+            blink(0);
+            move(0);
+            temp = 1;
+        }
+    });
     $('#test_bt').click(function() {
         console.log('NOTHING');
     });
