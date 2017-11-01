@@ -12,6 +12,11 @@ function printClock() {
     var want_time = parseInt(document.getElementById('want_time').value);
     // var want_time_minit = parseInt(document.getElementById('want_time_minit').value); //곧 쓸 분 단위 변수
 
+    if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
+        amPm = 'PM';
+        currentHours = addZeros(currentHours - 12,2);
+    }
+
 
     if(currentHours >= (want_time-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
         //근데 시간 기준을 알려면 오후에 해야할듯.
@@ -20,15 +25,10 @@ function printClock() {
         currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
 
-    if(currentHours==(want_time))
+    if(currentHours == (want_time))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
         alert("지정하신 퇴근 타이밍이 되었습니다.");
     } 
-
-    if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
-        amPm = 'PM';
-        currentHours = addZeros(currentHours - 12,2);
-    }
 
     if(currentSeconds>=50){ // 이친구는 원래 있던 초단위 색 변함 , 근데 테스트좀- 테스트 끝
         currentSeconds='<span style="color:#de1951;">'+currentSeconds+'</span>'
