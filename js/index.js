@@ -15,7 +15,7 @@ function printClock() {
         currentHours = addZeros(currentHours - 12,2);
     }
 
-    if(currentHours >= 5){// 5시 이후 색이 변함
+    if(currentHours >= 11){ // 5시 이후 색이 변함
         currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
         currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
         currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
