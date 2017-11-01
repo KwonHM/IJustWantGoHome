@@ -26,12 +26,12 @@ body {
     font-size:100px; 
     text-align:center;
 }
-.footer {
+.footer { /* 곧 쓸거임 */
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: rgb(68, 58, 58);
     color: white;
-    text-align: center; /* 곧 쓸거임!!!! */
+    text-align: center;
 } 
