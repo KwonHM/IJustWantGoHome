@@ -21,7 +21,7 @@ function printClock() {
     if(currentHours >= (want_time-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
         //근데 시간 기준을 알려면 오후에 해야할듯.
 
-        if(currentMinute >= (want_time_min))
+        if(currentMinute >= (60-want_time_min))
         {
             currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
             currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
