@@ -29,9 +29,12 @@ function printClock() {
         } 
     }
 
-    if(currentHours == (want_time) && currentMinute==(want_time_min))
+    if(currentHours == (want_time))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
+        if(currentMinute==(want_time_min))
+        {
         alert("지정하신 퇴근 타이밍이 되었습니다.");
+        }
     }
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
