@@ -2,15 +2,15 @@ let temp = 0;
 
 function printClock() {
     
-    var clock = document.getElementById("clock");            // 출력할 장소 선택
-    var currentDate = new Date();                                     // 현재시간
-    var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate() // 현재 날짜
-    var amPm = 'AM'; // 초기값 AM
-    var currentHours = addZeros(currentDate.getHours(),2); 
-    var currentMinute = addZeros(currentDate.getMinutes() ,2);
-    var currentSeconds =  addZeros(currentDate.getSeconds(),2);
-    var want_time = parseInt(document.getElementById('want_time').value);
-    var want_time_min = parseInt(document.getElementById('want_time_min').value);
+    let clock = document.getElementById("clock");            // 출력할 장소 선택
+    let currentDate = new Date();                                     // 현재시간
+    let calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate() // 현재 날짜
+    let amPm = 'AM'; // 초기값 AM
+    let currentHours = addZeros(currentDate.getHours(),2); 
+    let currentMinute = addZeros(currentDate.getMinutes() ,2);
+    let currentSeconds =  addZeros(currentDate.getSeconds(),2);
+    let want_time_hour = parseInt($('#want_time_hour').val());
+    let want_time_min = parseInt($('#want_time_min').val());
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
@@ -18,7 +18,7 @@ function printClock() {
     }
 
 
-    if(currentHours >= (want_time-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
+    if(currentHours >= (want_time_hour-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
         //근데 시간 기준을 알려면 오후에 해야할듯.
 
         if(currentMinute >= (want_time_min))
@@ -29,7 +29,7 @@ function printClock() {
         } 
     }
 
-    if(currentHours == (want_time))
+    if(currentHours == (want_time_hour))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
         if(currentMinute==(want_time_min))
         {
@@ -42,14 +42,14 @@ function printClock() {
 }
 
 function addZeros(num, digit) { // 자릿수 맞춰주기
-        var zero = '';
+        let zero = '';
         num = num.toString();
         if (num.length < digit) {
         for (i = 0; i < digit - num.length; i++) {
             zero += '0';
         }
         }
-        return zero + num; //인라인 함수 하지 말기
+        return zero + num;
 }
 
 function blink() {
@@ -72,7 +72,7 @@ function blink() {
     setTimeout('blink()', 70);
 }
 
- /*function move() {
+ function move() {
     let align = $('body').css('text-align');
     if(align == 'left') {
         $('body').css('text-align','center');
@@ -86,12 +86,15 @@ function blink() {
         $('body').css('text-align','left');
     }
     setTimeout('move()', 50);
-}*/
+}
 
 
 $(document).ready(function() {
     $('body').onload = printClock();
     $('body').onload = blink();
-    $('body').onload = move();
+    //$('body').onload = move();
+    $('#test_bt').click(function() {
+        console.log('NOTHING');
+    });
     // Handler for .ready() called.
 });
