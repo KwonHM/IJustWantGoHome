@@ -9,6 +9,12 @@ function printClock() {
     var currentHours = addZeros(currentDate.getHours(),2); 
     var currentMinute = addZeros(currentDate.getMinutes() ,2);
     var currentSeconds =  addZeros(currentDate.getSeconds(),2);
+    var want_time;
+
+    function input(){
+        var input=document.getElementById("want_time").value;
+        want_time=input;
+    }
 
     if(currentHours >= 17){ // 5시 이후 색이 변함
         currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
@@ -20,7 +26,7 @@ function printClock() {
         currentHours = addZeros(currentHours - 12,2);
     }
 
-    if(currentSeconds>=document.getElementById("want_time")){ // 이친구는 원래 있던 초단위 색 변함 , 근데 테스트좀
+    if(currentSeconds>want_time){ // 이친구는 원래 있던 초단위 색 변함 , 근데 테스트좀
         currentSeconds='<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
