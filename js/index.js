@@ -20,22 +20,19 @@ function printClock() {
 
     if(currentHours >= (want_time-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
         //근데 시간 기준을 알려면 오후에 해야할듯.
-        currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
+        
         if(currentMinute >= (want_time_min))
         {
+            currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
             currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
-        }
-        currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
+            currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
+        } 
     }
 
 
     if(currentHours == (want_time))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
         alert("지정하신 퇴근 타이밍이 되었습니다.");
-    } 
-
-    if(currentSeconds>=50){ // 이친구는 원래 있던 초단위 색 변함 , 근데 테스트좀- 테스트 끝
-        currentSeconds='<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
