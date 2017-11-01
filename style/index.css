@@ -65,10 +65,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .serval_says_korega_warp_nano_sugoi{
     position: fixed;
-    left: 35%;
+    left: 40%;
 
 }
 .serval_says_korega_warp_nano_sugoi .kaban_says_serval_chan_korewa_minus_dayo{
     position: relative; 
-    left: -65%;
+    left: -60%;
   }  
