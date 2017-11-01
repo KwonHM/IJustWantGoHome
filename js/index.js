@@ -19,6 +19,12 @@ function printClock() {
         currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
         currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
+
+    if(currentHours==(want_time))
+    { //설정한 퇴근 시간이 되면 alert 알림 표시
+        alert("지정하신 퇴근 타이밍이 되었습니다.");
+    } 
+
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
         currentHours = addZeros(currentHours - 12,2);
