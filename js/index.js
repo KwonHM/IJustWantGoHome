@@ -9,17 +9,17 @@ function printClock() {
     var currentHours = addZeros(currentDate.getHours(),2); 
     var currentMinute = addZeros(currentDate.getMinutes() ,2);
     var currentSeconds =  addZeros(currentDate.getSeconds(),2);
-    
+
+    if(currentHours >= 17){ // 5시 이후 색이 변함
+        currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
+        currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
+        currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
+    }
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
         currentHours = addZeros(currentHours - 12,2);
     }
 
-    if(currentHours >= 11){ // 5시 이후 색이 변함
-        currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
-        currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
-        currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
-    }
     if(currentSeconds>=50){ // 이친구는 원래 있던 초단위 색 변함
         currentSeconds='<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
