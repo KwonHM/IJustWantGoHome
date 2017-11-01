@@ -20,9 +20,9 @@ function printClock() {
         currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
         currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
-    if(currentSeconds>=50){ // 이친구는 원래 있던 초단위 색 변함
-        currentSeconds='<span style="color:#de1951;">'+currentSeconds+'</span>'
-    }
+    //if(currentSeconds>=50){ // 이친구는 원래 있던 초단위 색 변함
+    //    currentSeconds='<span style="color:#de1951;">'+currentSeconds+'</span>'
+    //}
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
     setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
