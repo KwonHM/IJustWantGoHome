@@ -6,8 +6,7 @@
 body {
     /*background: skyblue;*/
     font-family : 'SeoulNamsanM';
-    text-align: center;   
-    color: red;
+    text-align: center;
     
     perspective: 800px;
     background-image: url("https://github.com/skyaria2016/table/blob/master/img_theme/kemono/kemono.jpg?raw=true");
