@@ -15,7 +15,7 @@ function printClock() {
         currentHours = addZeros(currentHours - 12,2);
     }
 
-    if(currentHours >= 9){// 일정 시간 이후 색이 변함
+    if(currentHours >= 5){// 일정 시간 이후 색이 변함
         currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
     }
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
