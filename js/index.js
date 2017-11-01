@@ -65,7 +65,7 @@ function blink() {
     setTimeout('blink()', 70);
 }
 
-function move() {
+ /*function move() {
     let align = $('body').css('text-align');
     if(align == 'left') {
         $('body').css('text-align','center');
@@ -79,7 +79,7 @@ function move() {
         $('body').css('text-align','left');
     }
     setTimeout('move()', 50);
-}
+}*/
 
 
 $(document).ready(function() {
