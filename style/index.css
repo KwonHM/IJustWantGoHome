@@ -68,8 +68,12 @@ input[type="number"]::-webkit-inner-spin-button {
     padding-right: 5px;
     width: 30px;
 }
-.fixed
-{
+.fixfix{
     position: fixed;
-    text-align:center;
+    left: 50%;
+
 }
+.fixfix .fixfixfix{
+    position:relative; 
+    left:-50%;
+  }  
