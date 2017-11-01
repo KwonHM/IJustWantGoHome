@@ -18,7 +18,7 @@ function printClock() {
     }
 
 
-    if(currentHours >= (want_time-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
+    if(currentHours >= (want_time_hour-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
 
         if(currentMinute >= (60-want_time_min))
         {
