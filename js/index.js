@@ -26,7 +26,7 @@ function printClock() {
         currentHours = addZeros(currentHours - 12,2);
     }
 
-    if(currentSeconds>want_time){ // 이친구는 원래 있던 초단위 색 변함 , 근데 테스트좀
+    if(currentSeconds>=want_time){ // 이친구는 원래 있던 초단위 색 변함 , 근데 테스트좀
         currentSeconds='<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
