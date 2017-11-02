@@ -14,17 +14,17 @@ function printClock() {
     function getRadioValue(gozen_gogou)
     {
            var len = gozen_gogou.length;
-            if (!len && gozen_gogou.checked)
+                       if (!len && gozen_gogou.checked)
+                    {
+                            return gozen_gogou.value;
+                    }
+            for (var i=0, m=gozen_gogou.length; i < m; i++ )
          {
-                 return gozen_gogou.value;
-                     }
-                         for (var i=0, m=gozen_gogou.length; i < m; i++ )
-         {
-             if (gozen_gogou[i].checked)
+                     if (gozen_gogou[i].checked)
                  {
-                     return gozen_gogou[i].value;
+                          return gozen_gogou[i].value;
                  }
-          }
+         }
     }
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
