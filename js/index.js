@@ -90,6 +90,8 @@ function blink() {
             $('body').css('color','red');
         }
         setTimeout('blink()', 50);
+    } else {
+        $('body').css('color','black');
     }
 }
 
