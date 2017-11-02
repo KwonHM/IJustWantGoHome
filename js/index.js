@@ -11,6 +11,7 @@ function printClock() {
     let currentSeconds =  addZeros(currentDate.getSeconds(),2);
     let want_time_hour = parseInt($('#want_time_hour').val());
     let want_time_min = parseInt($('#want_time_min').val());
+    let gouzen_gogou = document.getElementsByName('gouzen_gogou');
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
@@ -20,7 +21,7 @@ function printClock() {
 
     if(currentHours >= (want_time_hour-1)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
 
-        if(currentMinute >= (60-want_time_min))
+        if(currentMinute >= (want_time_min))
         {
             currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
             currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
