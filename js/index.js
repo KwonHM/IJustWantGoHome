@@ -1,4 +1,5 @@
 let temp = 0;
+let flag = true;
 
 function printClock() {
     
@@ -66,47 +67,47 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
         return zero + num;
 }
 
-function blink(stop) {
-    let color = $('body').css('color');
-    if(color == 'rgb(255, 0, 0)' && temp == 0) {
-        $('body').css('color','orange');
-    } else if (color == 'rgb(255, 165, 0)') {
-        $('body').css('color','yellow');
-    } else if (color == 'rgb(255, 255, 0)') {
-        $('body').css('color','green');
-    } else if (color == 'rgb(0, 128, 0)') {
-        $('body').css('color','blue');
-    } else if (color == 'rgb(0, 0, 255)') {
-        $('body').css('color','navy');
-    } else if (color == 'rgb(0, 0, 128)') {
-        $('body').css('color','purple');
-    } else {
-        $('body').css('color','red');
-    }
-    if(stop == 1) {
-        return;
-    } else {
+function stop() {
+    flag = false;
+}
+
+function blink() {
+    if(flag) {
+        let color = $('body').css('color');
+        if(color == 'rgb(255, 0, 0)' && temp == 0) {
+            $('body').css('color','orange');
+        } else if (color == 'rgb(255, 165, 0)') {
+            $('body').css('color','yellow');
+        } else if (color == 'rgb(255, 255, 0)') {
+            $('body').css('color','green');
+        } else if (color == 'rgb(0, 128, 0)') {
+            $('body').css('color','blue');
+        } else if (color == 'rgb(0, 0, 255)') {
+            $('body').css('color','navy');
+        } else if (color == 'rgb(0, 0, 128)') {
+            $('body').css('color','purple');
+        } else {
+            $('body').css('color','red');
+        }
         setTimeout('blink()', 50);
     }
 }
 
- function move(stop) {
-    let align = $('body').css('text-align');
-    if(align == 'left') {
-        $('body').css('text-align','center');
-        temp = 1;
-    } else if(align == 'center' && temp == 1) {
-        $('body').css('text-align','right');
-        temp = 0;
-    } else if(align == 'right') {
-        $('body').css('text-align','center');
-    } else {
-        $('body').css('text-align','left');
-    }
-    if(stop == 1) {
-        return;
-    } else {
-        setTimeout('move()', 50);
+function move() {
+    if(flag) {
+        let align = $('body').css('text-align');
+        if(align == 'left') {
+            $('body').css('text-align','center');
+            temp = 1;
+        } else if(align == 'center' && temp == 1) {
+            $('body').css('text-align','right');
+            temp = 0;
+        } else if(align == 'right') {
+            $('body').css('text-align','center');
+        } else {
+            $('body').css('text-align','left');
+        }
+            setTimeout('move()', 50);
     }
 }
 
@@ -114,15 +115,11 @@ function blink(stop) {
 $(document).ready(function() {
     $('body').onload = printClock();
     $('#party_time').click(function() {
-        if(temp == 1) {
-            blink(1);
-            move(1);
-            temp = 0;
-        } else {
-            blink(0);
-            move(0);
-            temp = 1;
-        }
+        blink();
+        move();
+    });
+    $('#party_time_done').click(function() {
+        stop();
     });
     $('#test_bt').click(function() {
         console.log('NOTHING');
