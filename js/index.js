@@ -1,5 +1,5 @@
 let temp = 0;
-let flag = true;
+let flag = false;
 
 function printClock() {
     
@@ -71,6 +71,12 @@ function stop() {
     flag = false;
 }
 
+function start() {
+    flag = true;
+    blink();
+    move();
+}
+
 function blink() {
     if(flag) {
         let color = $('body').css('color');
@@ -119,8 +125,7 @@ function move() {
 $(document).ready(function() {
     $('body').onload = printClock();
     $('#party_time').click(function() {
-        blink();
-        move();
+        start();
     });
     $('#party_time_done').click(function() {
         stop();
