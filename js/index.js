@@ -110,6 +110,8 @@ function move() {
             $('body').css('text-align','left');
         }
             setTimeout('move()', 50);
+    } else {
+        $('body').css('text-align','center');
     }
 }
 
