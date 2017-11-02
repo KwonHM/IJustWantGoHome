@@ -11,7 +11,21 @@ function printClock() {
     let currentSeconds =  addZeros(currentDate.getSeconds(),2);
     let want_time_hour = parseInt($('#want_time_hour').val());
     let want_time_min = parseInt($('#want_time_min').val());
-    let gouzen_gogou = document.getElementsByName('gouzen_gogou');
+    function getRadioValue(gozen_gogou)
+    {
+           var len = gozen_gogou.length;
+            if (!len && gozen_gogou.checked)
+         {
+                 return gozen_gogou.value;
+                     }
+                         for (var i=0, m=gozen_gogou.length; i < m; i++ )
+         {
+             if (gozen_gogou[i].checked)
+                 {
+                     return gozen_gogou[i].value;
+                 }
+          }
+    }
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
