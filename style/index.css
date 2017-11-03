@@ -14,11 +14,10 @@ background
 
 a {
     color: #2E64FE;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 body {
-    /*background: skyblue;*/
     font-family: 'SeoulNamsanM';
     text-align: center;
     perspective: 800px;
