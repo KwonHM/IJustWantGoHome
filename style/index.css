@@ -12,7 +12,7 @@ background
     height: 100%;
 }
 
-body a  {
+:any-link {
     color: #2E64FE;
     text-decoration: none;
 }
