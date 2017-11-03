@@ -29,9 +29,9 @@ function printClock() {
             currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
         } 
     }
-    if(currentHours >= (want_time_hour)){
+    if(currentHours == (want_time_hour)){
         
-                if(currentMinute >= (want_time_min))
+                if(currentMinute == (want_time_min))
                 {
                     alert("지정하신 퇴근 타이밍이 되었습니다.");
                 } 
