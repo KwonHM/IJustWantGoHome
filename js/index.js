@@ -29,14 +29,14 @@ function printClock() {
             currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
         } 
     }
-    if(currentHours==(want_time_hour))
+    /* if(currentHours==(want_time_hour))
     {
         alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
         window.location.reload();
-    }
+    } */
 
 
-    if(currentHours == (want_time_hour) && currentMinute==(want_time_min))
+    if((currentHours == (want_time_hour)) && (currentMinute==(want_time_min)))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
         alert("지정하신 퇴근 타이밍이 되었습니다.");
     }
