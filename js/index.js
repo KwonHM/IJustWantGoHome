@@ -13,8 +13,6 @@ function printClock() {
     let want_time_hour = parseInt($('#want_time_hour').val());
     let want_time_min = parseInt($('#want_time_min').val());
     let checkedValue = $("input[type=radio][name=gozen_gogou]:checked").val();
-    alert(checkedValue);
-
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
