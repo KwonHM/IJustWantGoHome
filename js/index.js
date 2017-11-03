@@ -20,7 +20,7 @@ function printClock() {
     }
 
 
-    if(currentHours >= (want_time_hour-1) && currentMinute>=(want_time_min)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
+    if(currentHours >= (want_time_hour-1) && currentMinute>(want_time_min)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
             currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
             currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
             currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
