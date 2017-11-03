@@ -32,7 +32,7 @@ function printClock() {
     if(currentHours==(want_time_hour))
     {
         alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
-        document.getElementById(want_time_hour).value = "";
+        window.location.reload();
     }
 
 
