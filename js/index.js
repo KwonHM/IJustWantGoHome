@@ -32,15 +32,13 @@ function printClock() {
     if(currentHours==(want_time_hour))
     {
         alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
+        document.getElementById(want_time_hour).value = "";
     }
 
 
-    if(currentHours == (want_time_hour))
+    if(currentHours == (want_time_hour) && currentMinute==(want_time_min))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
-        if(currentMinute==(want_time_min))
-        {
         alert("지정하신 퇴근 타이밍이 되었습니다.");
-        }
     }
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
