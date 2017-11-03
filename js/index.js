@@ -15,6 +15,7 @@ function printClock() {
     let want_time_hour = parseInt($want_hour.val());
     let want_time_min = parseInt($want_min.val());
     let checkedValue = $("input[type=radio][name=gozen_gogou]:checked").val();
+    let audio = new Audio('test.mp3');
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
@@ -28,8 +29,7 @@ function printClock() {
             currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
     if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
-                    alert("지정하신 퇴근 타이밍이 되었습니다.");
-                    var audio = new Audio('https://raw.githubusercontent.com/murikubo/shimushu/master/shushushu.mp3');
+                    alert("지정하신 퇴근 타이밍이 되었습니다.");       
                     audio.play();
             }
     if(currentHours==(want_time_hour))
