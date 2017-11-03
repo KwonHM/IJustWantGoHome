@@ -31,6 +31,11 @@ function printClock() {
             currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
         } 
     }
+    if(currentHours<=(want_time_hour-1))
+    {
+        alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
+    }
+
 
     if(currentHours == (want_time_hour))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
