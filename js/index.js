@@ -1,5 +1,6 @@
 let temp = 0;
 let flag = false;
+let time_flag = false;
 
 function printClock() {
     
@@ -7,6 +8,7 @@ function printClock() {
     let currentDate = new Date();                                     // 현재시간
     let calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate() // 현재 날짜
     let amPm = 'AM'; // 초기값 AM
+    let want_ampm = $('input[name=gozen_gogou]:checked').val();
     let currentHours = addZeros(currentDate.getHours(),2); 
     let currentMinute = addZeros(currentDate.getMinutes() ,2);
     let currentSeconds =  addZeros(currentDate.getSeconds(),2);
@@ -16,27 +18,39 @@ function printClock() {
     let want_time_min = parseInt($want_min.val());
     let checkedValue = $("input[type=radio][name=gozen_gogou]:checked").val();
     let audio = new Audio('test.mp3');
-
-    if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
+    
+    if(currentHours >= 12) { // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
         amPm = 'PM';
         currentHours = addZeros(currentHours - 12,2);
     }
-
-    if(want_time_hour*60 - parseInt(currentHours)*60 + want_time_min - parseInt(currentMinute) < 60)
-    {
-        alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
-        $want_hour.val('');
-        $want_min.val('');
+    
+    if(time_flag) {
+        if(amPm == want_ampm) {
+            if(want_time_hour*60 - parseInt(currentHours)*60 + want_time_min - parseInt(currentMinute) < 60)
+                {
+                    alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
+                    $want_hour.val('');
+                    $want_min.val('');
+                }
+        }
     }
 
-    if(currentHours >= (want_time_hour-1) && currentMinute>(want_time_min)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
-        currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
-        currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
-        currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
+    if(isNaN(want_time_hour) || isNaN(want_time_min)) {
+        time_flag = true;
+    } else {
+        time_flag = false;
     }
-    if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
-        alert("지정하신 퇴근 타이밍이 되었습니다.");       
-        audio.play();
+
+    if(amPm == want_ampm) {
+        if(currentHours >= (want_time_hour-1) && currentMinute>(want_time_min)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
+            currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
+            currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
+            currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
+        }
+        if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
+            alert("지정하신 퇴근 타이밍이 되었습니다.");       
+            audio.play();
+        }
     }
 
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
