@@ -6,6 +6,6 @@ We just want go home in time.
 KHomeTimer is KnifeGoHomeTimer's Abbreviation.
 
 ## TODOS
-[ ] Finish timer project
-[ ] Make puzzle
-[ ] Make better css design
+- [ ] Finish timer project
+- [ ] Make puzzle
+- [ ] Make better css design
