@@ -34,12 +34,11 @@ function printClock() {
         alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
         window.location.reload();
     } */
-
-
-    if((currentHours == (want_time_hour)) && (currentMinute==(want_time_min)))
+    if((currentHours == want_time_hour) && (currentMinute==want_time_min))
     { //설정한 퇴근 시간이 되면 alert 알림 표시
         alert("지정하신 퇴근 타이밍이 되었습니다.");
     }
+
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
     setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
