@@ -30,25 +30,14 @@ function printClock() {
     }
 
     if(currentHours >= (want_time_hour-1) && currentMinute>(want_time_min)){ // 본문에서 입력받은 원하는 시간 이후에 색이 빨간색으로 변함.
-            currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
-            currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
-            currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
+        currentHours = '<span style="color:#de1951;">'+currentHours+'</span>'
+        currentMinute= '<span style="color:#de1951;">'+currentMinute+'</span>'
+        currentSeconds= '<span style="color:#de1951;">'+currentSeconds+'</span>'
     }
     if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
-                    alert("지정하신 퇴근 타이밍이 되었습니다.");       
-                    audio.play();
-<<<<<<< HEAD
-            } 
-    if(currentHours==(want_time_hour))
-    {
-        alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
-        $want_hour.val('');
-        $want_min.val('');
+        alert("지정하신 퇴근 타이밍이 되었습니다.");       
+        audio.play();
     }
-=======
-            }
-    
->>>>>>> 3b0c9c873753fafbf53477a9905bbb170a062e63
 
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
@@ -56,14 +45,14 @@ function printClock() {
 }
 
 function addZeros(num, digit) { // 자릿수 맞춰주기
-        let zero = '';
-        num = num.toString();
-        if (num.length < digit) {
-        for (i = 0; i < digit - num.length; i++) {
-            zero += '0';
-        }
-        }
-        return zero + num;
+    let zero = '';
+    num = num.toString();
+    if (num.length < digit) {
+    for (i = 0; i < digit - num.length; i++) {
+        zero += '0';
+    }
+    }
+    return zero + num;
 }
 
 function stop() {
