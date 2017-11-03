@@ -10,8 +10,10 @@ function printClock() {
     let currentHours = addZeros(currentDate.getHours(),2); 
     let currentMinute = addZeros(currentDate.getMinutes() ,2);
     let currentSeconds =  addZeros(currentDate.getSeconds(),2);
-    let want_time_hour = parseInt($('#want_time_hour').val());
-    let want_time_min = parseInt($('#want_time_min').val());
+    let $want_hour = $('#want_time_hour');
+    let $want_min = $('#want_time_min');
+    let want_time_hour = parseInt($want_hour.val());
+    let want_time_min = parseInt($want_min.val());
     let checkedValue = $("input[type=radio][name=gozen_gogou]:checked").val();
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
@@ -28,11 +30,12 @@ function printClock() {
     if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
                     alert("지정하신 퇴근 타이밍이 되었습니다.");
             }
-    /* if(currentHours==(want_time_hour))
+    if(currentHours==(want_time_hour))
     {
         alert("최소 한 시간 이상 차이가 나게 설정해주십시오.");
-        window.location.reload();
-    } */
+        $want_hour.val('');
+        $want_min.val('');
+    }
 
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
