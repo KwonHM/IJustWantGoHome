@@ -35,6 +35,8 @@ function printClock() {
     }
     if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
                     alert("지정하신 퇴근 타이밍이 되었습니다.");
+                    var audio = new Audio('https://raw.githubusercontent.com/murikubo/shimushu/master/shushushu.mp3');
+                    audio.play();
             }
     
 
