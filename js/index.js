@@ -1,4 +1,5 @@
 let temp = 0;
+let flag = false;
 
 function printClock() {
     
@@ -14,17 +15,17 @@ function printClock() {
     function getRadioValue(gozen_gogou)
     {
            var len = gozen_gogou.length;
-            if (!len && gozen_gogou.checked)
+                       if (!len && gozen_gogou.checked)
+                    {
+                            return gozen_gogou.value;
+                    }
+            for (var i=0, m=gozen_gogou.length; i < m; i++ )
          {
-                 return gozen_gogou.value;
-                     }
-                         for (var i=0, m=gozen_gogou.length; i < m; i++ )
-         {
-             if (gozen_gogou[i].checked)
+                     if (gozen_gogou[i].checked)
                  {
-                     return gozen_gogou[i].value;
+                          return gozen_gogou[i].value;
                  }
-          }
+         }
     }
 
     if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
@@ -66,47 +67,57 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
         return zero + num;
 }
 
-function blink(stop) {
-    let color = $('body').css('color');
-    if(color == 'rgb(255, 0, 0)' && temp == 0) {
-        $('body').css('color','orange');
-    } else if (color == 'rgb(255, 165, 0)') {
-        $('body').css('color','yellow');
-    } else if (color == 'rgb(255, 255, 0)') {
-        $('body').css('color','green');
-    } else if (color == 'rgb(0, 128, 0)') {
-        $('body').css('color','blue');
-    } else if (color == 'rgb(0, 0, 255)') {
-        $('body').css('color','navy');
-    } else if (color == 'rgb(0, 0, 128)') {
-        $('body').css('color','purple');
-    } else {
-        $('body').css('color','red');
-    }
-    if(stop == 1) {
-        return;
-    } else {
+function stop() {
+    flag = false;
+}
+
+function start() {
+    flag = true;
+    blink();
+    move();
+}
+
+function blink() {
+    if(flag) {
+        let color = $('body').css('color');
+        if(color == 'rgb(255, 0, 0)' && temp == 0) {
+            $('body').css('color','orange');
+        } else if (color == 'rgb(255, 165, 0)') {
+            $('body').css('color','yellow');
+        } else if (color == 'rgb(255, 255, 0)') {
+            $('body').css('color','green');
+        } else if (color == 'rgb(0, 128, 0)') {
+            $('body').css('color','blue');
+        } else if (color == 'rgb(0, 0, 255)') {
+            $('body').css('color','navy');
+        } else if (color == 'rgb(0, 0, 128)') {
+            $('body').css('color','purple');
+        } else {
+            $('body').css('color','red');
+        }
         setTimeout('blink()', 50);
+    } else {
+        $('body').css('color','black');
     }
 }
 
- function move(stop) {
-    let align = $('body').css('text-align');
-    if(align == 'left') {
-        $('body').css('text-align','center');
-        temp = 1;
-    } else if(align == 'center' && temp == 1) {
-        $('body').css('text-align','right');
-        temp = 0;
-    } else if(align == 'right') {
-        $('body').css('text-align','center');
+function move() {
+    if(flag) {
+        let align = $('body').css('text-align');
+        if(align == 'left') {
+            $('body').css('text-align','center');
+            temp = 1;
+        } else if(align == 'center' && temp == 1) {
+            $('body').css('text-align','right');
+            temp = 0;
+        } else if(align == 'right') {
+            $('body').css('text-align','center');
+        } else {
+            $('body').css('text-align','left');
+        }
+            setTimeout('move()', 50);
     } else {
-        $('body').css('text-align','left');
-    }
-    if(stop == 1) {
-        return;
-    } else {
-        setTimeout('move()', 50);
+        $('body').css('text-align','center');
     }
 }
 
@@ -114,15 +125,10 @@ function blink(stop) {
 $(document).ready(function() {
     $('body').onload = printClock();
     $('#party_time').click(function() {
-        if(temp == 1) {
-            blink(1);
-            move(1);
-            temp = 0;
-        } else {
-            blink(0);
-            move(0);
-            temp = 1;
-        }
+        start();
+    });
+    $('#party_time_done').click(function() {
+        stop();
     });
     $('#test_bt').click(function() {
         console.log('NOTHING');
