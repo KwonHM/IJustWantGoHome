@@ -50,15 +50,9 @@ function printClock() {
         if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
             //alert("지정하신 퇴근 타이밍이 되었습니다.", audio.play());       
             audio.play();
-            function test_alert()
-            {
-            alert("지정하신 퇴근 타이밍이 되었습니다.");
-            }
-            function test_stop()
-            { 
-            if ( mark ) clearTimeout(mark);
-            }
-            var mark = setTimeout("지정하신 퇴근 타이밍이 되었습니다.()", 9000); 
+            setTimeout( function() {
+                alert("지정하신 퇴근 타이밍이 되었습니다");
+              }, 9000); 
         }
     }
 
