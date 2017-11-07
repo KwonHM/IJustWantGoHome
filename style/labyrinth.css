@@ -7,3 +7,8 @@ body {
 a {
     color: white;
 }
+
+.laby_wrap {
+    width: 100%;
+    margin-bottom: 10px;
+}
