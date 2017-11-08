@@ -2,6 +2,24 @@ let temp = 0;
 let flag = false;
 let time_flag = false;
 
+  Notification.requestPermission(function (result) {
+
+        //요청을 거절하면,
+        if (result === 'denied') {
+            return;
+        }
+        //요청을 허용하면,
+        else {
+            //데스크탑 알림 권한 요청 버튼을 비활성화
+            requestPermissionButton.attr('disabled', 'disabled');
+            //데스크탑 메시지 입력폼을 활성화
+            notificationMessage.removeAttr('disabled');
+            //데스크탑 메시지 요청 버튼을 활성화
+            notificationButton.removeAttr('disabled');
+            return;
+        }
+    });
+
 function printClock() {
     
     let clock = document.getElementById("clock");            // 출력할 장소 선택
