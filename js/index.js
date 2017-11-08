@@ -50,9 +50,7 @@ function printClock() {
         if(currentHours == (want_time_hour)&&currentMinute==(want_time_min)){
             //alert("지정하신 퇴근 타이밍이 되었습니다.", audio.play());       
             audio.play();
-            setTimeout( function() {
-                alert("지정하신 퇴근 타이밍이 되었습니다");
-              }, 9000); 
+            finish();
         }
     }
 
@@ -126,6 +124,15 @@ function move() {
     }
 }
 
+function finish() {
+
+        var notification = new Notification("칼퇴타이머","지정하신 퇴근 타이밍이 되었습니다.");
+        //알림 후 5초 뒤,
+        setTimeout(function () {
+            //얼람 메시지 닫기
+            notification.close();
+        }, 5000);
+}
 
 $(document).ready(function() {
     $('body').onload = printClock();
