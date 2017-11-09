@@ -126,6 +126,16 @@ function move() {
     }
 }
 
+function savet() {
+    $.ajax({
+        url:"php/sessiontime.php",
+        type:"post",
+        data:$("form").serialize(),
+    }).done(function(data) {
+        console.log(data)
+    })
+}
+
 
 $(document).ready(function() {
     $('body').onload = printClock();

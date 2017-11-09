@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -29,7 +32,7 @@
           오전<input type="radio" name="gozen_gogou" value="AM">
           오후<input type="radio" name="gozen_gogou" value="PM" checked>
           <input name="hour" type="number" id="want_time_hour" class="time_input" step="24" autofocus value="<?php echo $hour?>">시
-          <input name="min" type="number" id="want_time_min" class="time_input" step="60"  value="<?php echo $min?>">분
+          <input name="min" type="number" id="want_time_min" class="time_input" step="60" onchange="savet();" value="<?php echo $min?>">분
         </form>
       </div>
     </div>
