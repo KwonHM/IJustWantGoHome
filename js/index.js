@@ -1,1 +1,6 @@
-//TODO: 준비중 클릭시 이동 못하게 막기
+$(document).ready(function() {
+    $('.not_ready').click(function(){
+        alert("이 프로젝트는 준비중입니다.");
+        event.preventDefault();
+    });
+}); 

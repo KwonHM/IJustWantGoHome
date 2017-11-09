@@ -14,4 +14,7 @@ a {
     font-size: 24px;
     margin: 40px 0px;
 }
-/*TODO: 준비중 CSS 따로 준비*/
+.not_ready {
+    color: gray;
+    cursor: default;
+}
