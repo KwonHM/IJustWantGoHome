@@ -92,8 +92,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 highlight {
-	text-shadow: 0 0 2px #000000;
-	-moz-text-shadow: 0 0 2px #000000;
-	-webkit-text-shadow: 0 0 2px #000000;
-    color: plum;
+	text-shadow: 0 0 2px #ffffff;
+	-moz-text-shadow: 0 0 2px #ffffff;
+	-webkit-text-shadow: 0 0 2px #ffffff;
+    color: green;
 }
