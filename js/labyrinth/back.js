@@ -8,7 +8,7 @@ $(document).ready(function() {
     });
     
     $('.anime_back').click(function() {
-        location.href = './start.html';
+        location.href = './index.html';
     });
     $('#hide').click(function(){
         $('.hint').hide();
