@@ -10,13 +10,11 @@ $(document).ready(function() {
     $('.anime_back').click(function() {
         location.href = './start.html';
     });
-}); 
+    $('#hide').click(function(){
+        $('.hint').hide();
+    });
 
-$(document).ready(function(){
-    $("#hide").click(function(){
-        $("p").hide();
+    $('#show').click(function(){
+        $('.hint').show();
     });
-    $("#show").click(function(){
-        $("p").show();
-    });
-});
+}); 
