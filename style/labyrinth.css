@@ -14,6 +14,7 @@ a {
 .laby_button {
     font-family: 'SeoulNamsanM';
     border: 1px solid;
+    border-radius: 5px;
     background: rgb(228, 158, 135);
     color: rgb(85, 21, 21);
     padding: 10px;
