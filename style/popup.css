@@ -8,7 +8,7 @@ body {
 }
 
 .pop-layer .pop-container {
-  padding: 20px 25px;
+  padding: 15px 20px;
 }
 
 /*레이어 안에 써져있는 글씨들 */
@@ -20,7 +20,7 @@ body {
 /*레이어 전체 */
 .pop-layer .btn-r {
   width: 100%;
-  margin: 10px 0 20px;
+  margin: 30px 0 0px;
   padding-top: 10px;
   border-top: 1px solid #DDD;
   text-align: right;
