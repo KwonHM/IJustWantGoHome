@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrap">First Stage</div>
-    
+
     <div class="wrap">힌트를 쓰면 게임의 난이도가 굉장히 하락되어 재미 없어집니다.</div>
     <div class="wrap"><i>에에~~? 이-지 모드??? 이지모드가 용서되는건 초등학생 까지라구!</i></div>
     <button class="laby_button" id="hide">숨기기</button>
@@ -18,11 +18,6 @@
     <div class="warp">
         <p>힌트 : 이 미궁의 주제와 주소의 이름...?</p>
     </div>
-    <script>
-        $("#hide").click(function () {
-            $("p:last-child").hide("fast", function () { $(this).prev().hide("fast", arguments.callee); });
-        }); $("#show").click(function () { $("p").show(2000); });
-    </script>
     <!-- 버튼 추가해서 힌트는 원하는 사람만 보게 숨겨놓거나 아예 어딘가에 숨겨둘 예정 -->
     <button class="back laby_button">Back to Entrance</button>
 </body>
