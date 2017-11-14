@@ -1,0 +1,21 @@
+body {
+    background: black;
+    color: white;
+    font-family: 'SeoulNamsanM';
+    text-align: center;
+}
+a {
+    color: white;
+}
+.wrap {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.laby_button {
+    font-family: 'SeoulNamsanM';
+    border: 1px solid;
+    background: rgb(228, 158, 135);
+    color: rgb(85, 21, 21);
+    padding: 10px;
+    margin-top: 50px;
+}
