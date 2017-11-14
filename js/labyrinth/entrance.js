@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $('.anime').click(function() {
-        location.href = './anime/start.html';
+        location.href = './anime/index.html';
     });
 }); 
