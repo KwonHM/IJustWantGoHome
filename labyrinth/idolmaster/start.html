@@ -8,6 +8,18 @@
     <title>Stage 1</title>
     <link rel= "stylesheet" type="text/css" href="../../style/font.css">
     <link rel= "stylesheet" type="text/css" href="../../style/labyrinth.css">    
+    <script type="text/javascript">
+        if(window.addEventListener){
+            var kkeys=[],konami='38,38,40,40,37,39,37,39,66,65';
+            window.addEventListener('keydown',function(e){
+                kkeys.push(e.keyCode);
+                if(kkeys.toString().indexOf(konami)>=0)
+            {
+                window.location='sakuma_mayu.html';
+                }
+                }
+                ,true);}
+        </script> <!-- 코나미 커멘드 스크립트. 추후에 사쿠마 마유 문제때 사용할 예정. 임시로 여따 박아둠 -->
 </head>
 <body>
     <div class="wrap">First Stage</div>
@@ -27,7 +39,7 @@
 </body>
     <h5>
         Mondai Designer / Sub Coder - <a href="https://github.com/Kingjuho">Kingjuho</a><br>
-        Mondai Designer - <a href="https://github.com/murikubo">Murikubo</a><br>
+        Mondai Designer / Style Coder - <a href="https://github.com/murikubo">Murikubo</a><br>
         Server Manager - <a href="https://github.com/lunch1019">lunch1019</a><br>
         Main Coder - <a href="https://github.com/jinjeok">jinjeok</a><br>
         메인 코더는 문제 내용에 전혀 관여하지 않았음을 명시합니다.
