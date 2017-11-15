@@ -15,7 +15,7 @@ $(document).ready(function() {
         location.href = './start.html';
     });
 
-    $('hearthstone_back').click(function() {
+    $('.hearthstone_back').click(function() {
         location.href = './start.html';
     })
     
