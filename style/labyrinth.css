@@ -36,3 +36,26 @@ a {
 .hint {
     display: none;
 }
+
+.sekaiju_no_meikyuu
+{
+    font-size: 14px;
+    font-family: 'SeoulNamsanM';
+    display: inline-block;
+    padding: 10px;
+    margin : 0 3px;
+    margin-top : 30px;
+    border: 1px solid  greenyellow;
+    background-color: black;
+    font-size: 17px;
+    color: #fff;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: center;
+    cursor: pointer;
+}
+.sekaiju_no_meikyuu:hover {
+    border: 1px solid white;
+    background-color: gray;
+    color: #fff;
+  }
