@@ -14,6 +14,10 @@ $(document).ready(function() {
     $('.idolmaster_back').click(function() {
         location.href = './start.html';
     });
+
+    $('hearthstone_back').click(function() {
+        location.href = './start.html';
+    })
     
     $('#hide').click(function(){
         $('.hint').hide();
