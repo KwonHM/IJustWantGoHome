@@ -1,11 +1,11 @@
 body {
-    background: black;
-    color: white;
+    background: #000000;
+    color: #ffffff;
     font-family: 'SeoulNamsanM';
     text-align: center;
 }
 a {
-    color: white;
+    color: #ffffff;
 }
 .wrap {
     width: 100%;
