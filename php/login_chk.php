@@ -7,20 +7,20 @@ require_once('dbconfig.php');
 $id = $_POST['id'];
 $pss = $_POST['passwd'];
 
-$sql = 'select * from member where u_id ="'.$id.'"';
+$sql = 'select * from member where U_id ="'.$id.'"';
 $result = $db->query($sql);
 $row = mysqli_fetch_assoc($result);
 
 
-if($row['u_id'] != '') {
+if($row['U_id'] != '') {
 	
-	$sql = 'select passwd from member where u_id = "'.$id.'" and passwd ="'.$pss.'"';
+	$sql = 'select U_passwd from member where U_id = "'.$id.'" and U_passwd ="'.$pss.'"';
 	$result = $db->query($sql);
 	$row = mysqli_fetch_assoc($result);
 
-	if($row['passwd'] != ''){
+	if($row['U_passwd'] != ''){
 	
-	$sql = 'select * from member where u_id ="'.$id.'"';
+	$sql = 'select * from member where U_id ="'.$id.'"';
 	$result = $db->query($sql);
 	$row = mysqli_fetch_assoc($result);
 

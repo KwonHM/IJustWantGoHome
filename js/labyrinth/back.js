@@ -29,4 +29,9 @@ $(document).ready(function() {
     $('#show').click(function(){
         $('.hint').show();
     });
+
+    $('#giveup').click(function(){
+        document.giveup.action = "../../php/giveup.php";
+        document.giveup.submit();
+    });
 }); 
