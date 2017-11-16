@@ -18,6 +18,11 @@ $(document).ready(function() {
     $('.hearthstone_back').click(function() {
         location.href = './start.html';
     })
+
+    $('.pokemon_back').click(function() {
+        location.href = './pokemon/start.html';
+    });
+
     $('.meiQ_ent').click(function() {
         location.href = '../yggdrasil/1st_floor.html';
     })
