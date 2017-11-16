@@ -20,7 +20,7 @@ $(document).ready(function() {
     })
 
     $('.pokemon_back').click(function() {
-        location.href = './pokemon/start.html';
+        location.href = './start.html';
     });
 
     $('.meiQ_ent').click(function() {
