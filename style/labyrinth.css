@@ -11,6 +11,15 @@ a {
     width: 100%;
     margin-bottom: 5px;
 }
+.winner_winner_chicken_dinner
+{
+    color: yellow;
+    text-align: left;
+}
+.winner_winner_chicken_dinner_none_yellow
+{
+    text-align: left;
+}
 .laby_button {
     font-size: 14px;
     font-family: 'SeoulNamsanM';
