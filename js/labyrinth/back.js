@@ -18,6 +18,9 @@ $(document).ready(function() {
     $('.hearthstone_back').click(function() {
         location.href = './start.html';
     })
+    $('.meiQ_ent').click(function() {
+        location.href = '../yggdrasil/1st_floor.html';
+    })
     
     $('#hide').click(function(){
         $('.hint').hide();
