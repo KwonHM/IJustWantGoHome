@@ -68,3 +68,16 @@ a {
     background-color: gray;
     color: #fff;
   }
+
+  blacklight {
+	text-shadow: 0 0 2px #ffffff;
+	-moz-text-shadow: 0 0 2px #ffffff;
+	-webkit-text-shadow: 0 0 2px #ffffff;
+    color: black;
+}
+whitelight {
+	text-shadow: 0 0 2px #ffffff;
+	-moz-text-shadow: 0 0 2px #ffffff;
+	-webkit-text-shadow: 0 0 2px #ffffff;
+    color: white;
+}
