@@ -1,0 +1,33 @@
+
+.leader_board {
+    border-collapse: collapse;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+}
+thead {
+    background: lightgray;
+}
+tr {
+    height: 30px;
+}
+td {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: gray;
+    padding: 10px;
+}
+
+.rank {
+    width: 15%;
+}
+.name {
+    width: 30%;
+}
+.difficulty {
+    width: 20%;
+}
+.achieveday{
+    width: 35%;
+}
