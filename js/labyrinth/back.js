@@ -26,6 +26,9 @@ $(document).ready(function() {
     $('.meiQ_ent').click(function() {
         location.href = '../yggdrasil/1st_floor.html';
     })
+    $('.anime_hard').click(function() {
+        location.href = '../anime_hard/start.html';
+    })
     
     $('#hide').click(function(){
         $('.hint').hide();
