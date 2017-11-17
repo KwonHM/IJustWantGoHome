@@ -29,6 +29,12 @@ $(document).ready(function() {
     $('.anime_hard').click(function() {
         location.href = '../anime_hard/start.html';
     })
+    $('.leader_board').click(function() {
+        location.href = '../php/leader_board.php';
+    })
+    $('.labyrinth_back').click(function() {
+        location.href = '../labyrinth/entrance.html';
+    });
     
     $('#hide').click(function(){
         $('.hint').hide();
