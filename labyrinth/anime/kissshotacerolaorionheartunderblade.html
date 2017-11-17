@@ -13,18 +13,17 @@
     <div class="wrap winner_winner_chicken_dinner"><h1>이겼닭! 오늘 저녁은 치킨이닭!</h1></div>
     <div class="wrap winner_winner_chicken_dinner_none_yellow"><h3>winner winner chicken dinner!</h3></div>
     <hr/>
-    <div class="wrap">모든 스테이지를 클리어 하셨습니다.</div>
-    <div class="wrap">~추후 리더보드 추가 예정~</div>
+    <div class="wrap">모든 스테이지를 클리어 하셨습니다.</div>  
+    <div class="wrap">명예의 전당에 남길 이름을 적어주세요</div>
     <hr/>
-    <div class="wrap">* 추후에 이곳에 서버와 연동해서 리더보드 기능을 구현하는건 어떨까?</div>
-    <div class="wrap"><i>"드디어 서버가 일할 차례."</i></div>
     <div class="wrap">
-        <button class="laby_button" id="hide">숨기기</button>
-        <button class="laby_button" id="show">보이기</button>
-    </div>
-    <div class="wrap hint">
-        <p>힌트 : ...가 있을리가 없잖아요.</p>
-    </div>
+        <form name="saveinfo" id="saveinfo">
+            <input type="hidden" name="difficulty" value="easy">
+            <input type="hidden" name="Genre" value="anime">
+            <input type="text" name="user_name" maxlength="20" placeholder="이름">
+            <input type="button" class="laby_button" onclick="save_score();" value="저장하기!">
+        </form>
+    </div>   
     <button class="anime_back laby_button">처음으로</button>
     <button class="anime_hard laby_button">하드모드로</button>
 </body>
