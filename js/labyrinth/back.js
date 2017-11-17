@@ -38,8 +38,23 @@ $(document).ready(function() {
         $('.hint').show();
     });
 
-    $('#giveup').click(function(){
-        document.giveup.action = "../../php/giveup.php";
-        document.giveup.submit();
-    });
-}); 
+});
+function save_score() { 
+    if(document.saveinfo.user_name.value == ""){
+        alert("이름을 입력해 주세요.");
+        document.saveinfo.user_name.focus();
+        return;
+    }
+    $.ajax({
+        url:"../../php/save_score.php",
+        type:"post",
+        data:$("#saveinfo").serialize(),
+    }).done(function(data) {
+        if(data == 1){
+            alert("저장이 완료 되었습니다.");
+            location.href="../../php/leader_board.php";
+        }else {
+            alert(data);
+        }
+    })
+} 

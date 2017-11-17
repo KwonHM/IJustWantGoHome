@@ -19,20 +19,29 @@ require_once('dbconfig.php');
 <html>
 <meta charset="utf-8">
 <head>
-	<title>순위</title>
+	<title>명예의 전당</title>
+	<link rel="stylesheet" href="../style/table.css">
 </head>
 <body>
-<table border="1" class="view" >
+<section>
+  <!--for demo wrap-->
+  <h1>명예의 전당</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
 			<thead>
 				<tr>
-					<td class="tdnumber">순위</td>
-					<td class="tdtilte">이름</td>
-					<td class="tdwriter">점수</td>
-					<td class="tdview">달성날짜</td>
+					<td>순위</td>
+					<td>이름</td>
+					<td>난이도</td>
+					<td>달성날짜</td>
 				</tr>
 			</thead>
-			<tbody>
-		<?php
+	</table>
+	</div>
+	<div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">		
+		<tbody>
+			<?php
 				
 				$P_point = ($N_Page-1) * $P_record;
 				$search_result =$_POST['search'];
@@ -41,14 +50,13 @@ require_once('dbconfig.php');
 
 		switch ($search_filter) {
 					case 0:
-						$sql = 'select * from score_board where user_name like "%'.$search_result.'%" and Genre = "'.$Genre.'" order by user_score desc limit '.$P_point.', '.$P_record.'';
-						$res_count = 'select * from score_board where user_name like "%'.$search_result.'%" and Genre = "'.$Genre.'" order by user_score desc';
+						$sql = 'select * from score_board where user_name like "%'.$search_result.'%" and Genre = "'.$Genre.'" order by U_number desc limit '.$P_point.', '.$P_record.'';
+						$res_count = 'select * from score_board where user_name like "%'.$search_result.'%" and Genre = "'.$Genre.'" order by U_number desc';
 					break;
-									
-									
+											
 					default:
-							$sql = 'select * from score_board where Genre = "'.$Genre.'" order by user_score desc limit '.$P_point.', '.$P_record.'';
-						$res_count = 'select * from score_board where  Genre = "'.$Genre.'" order by user_score desc';
+							$sql = 'select * from score_board where Genre = "'.$Genre.'" order by U_number desc limit '.$P_point.', '.$P_record.'';
+						$res_count = 'select * from score_board where  Genre = "'.$Genre.'" order by U_number desc';
 					break;
 			}			
 					//페이징
@@ -64,19 +72,20 @@ require_once('dbconfig.php');
 					{
 				?>
 				<tr>
-					<td class="tdnumber"><?php echo $numbering?></td>
-					<td class="tdname">
-					<?php echo $row['user_name']?>	
-					</td>
-					<td class="tdwriter"><?php echo $row['user_score']?>점</td>
-					<td class="tdbirthday"><?php echo $row['achieve_date']?></td>
+					<td><?php echo $numbering?></td>
+					<td><?php echo $row['user_name']?></td>
+					<td><?php echo $row['Difficulty']?></td>
+					<td><?php echo $row['achieve_date']?></td>
 				</tr>
 					<?php			
 					$numbering = $numbering + 1;	
 					}
 					?>
-			</tbody>
-			
+			</tbody>	
 		</table>
+	</div>
+</section>
 </body>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="../../js/table.js"></script>
 </html>

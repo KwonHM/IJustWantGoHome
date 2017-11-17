@@ -2,11 +2,11 @@
 require_once('dbconfig.php');
 
 $name = $_POST['user_name'];
-$score = $_POST['user_score'];
+$Difficulty = $_POST['difficulty'];
 $Genre = $_POST['Genre'];
 $date = date("Y-m-d");
 
-$sql = 'insert into score_board(U_number,Genre,user_name,user_score,achieve_date) values(null, "'.$Genre.'", "'.$name.'", "'.$score.'", "'.$date.'")';
+$sql = 'insert into score_board(U_number,Genre,user_name,Difficulty,achieve_date) values(null, "'.$Genre.'", "'.$name.'", "'.$Difficulty.'", "'.$date.'")';
 $result = $db->query($sql);
 
 if($result) {
