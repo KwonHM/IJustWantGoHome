@@ -18,11 +18,11 @@
     <div class="wrap">명예의 전당에 남길 이름을 적어주세요</div>
     <hr/>
     <div class="wrap">
-        <form name="saveinfo" id="saveinfo" onsubmit="save_score();">
+        <form name="saveinfo" id="saveinfo">
             <input type="hidden" name="difficulty" value="easy">
             <input type="hidden" name="Genre" value="anime">
-            <input type="text" name="user_name" maxlength="20" placeholder="이름">
-            <input type="button" class="laby_button" onclick="save_score();" value="저장하기!">
+            <input type="text" name="user_name" maxlength="20" placeholder="이름" autofocus>
+            <button type="submit" class="laby_button">저장하기!</button>
         </form>
         <?php include('../../php/leader_board.php');?>
     </div>   
@@ -31,6 +31,7 @@
 </body>
 <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../js/labyrinth/back.js"></script>
+<script type="text/javascript" src="../../js/labyrinth/anime_victory.js"></script>
 
 
 </html>
