@@ -74,7 +74,7 @@ require_once('dbconfig.php');
 				?>
 				<tr>
 					<td><?php echo $numbering?></td>
-					<td><?php echo $row['user_name']?></td>
+					<td><?php echo strip_tags($row['user_name'])?></td>
 					<td><?php echo $row['Difficulty']?></td>
 					<td><?php echo $row['achieve_date']?></td>
 				</tr>
