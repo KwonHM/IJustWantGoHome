@@ -49,12 +49,12 @@ require_once('dbconfig.php');
 
 		switch ($search_filter) {
 					case 0:
-						$sql = 'select * from score_board where user_name like "%'.$search_result.'%" and Genre = "'.$Genre.'" order by U_number asc limit '.$P_point.', '.$P_record.'';
+						$sql = 'select * from score_board where user_name like "%'.$search_result.'%" and Genre = "'.$Genre.'" order by U_number asc limit 100';
 						$res_count = 'select * from score_board where user_name like "%'.$search_result.'%" and Genre = "'.$Genre.'" order by U_number asc';
 					break;
 											
 					default:
-							$sql = 'select * from score_board where Genre = "'.$Genre.'" order by U_number asc limit '.$P_point.', '.$P_record.'';
+							$sql = 'select * from score_board where Genre = "'.$Genre.'" order by U_number asc limit 100';
 						$res_count = 'select * from score_board where  Genre = "'.$Genre.'" order by U_number asc';
 					break;
 			}			
@@ -86,8 +86,8 @@ require_once('dbconfig.php');
 </section>
 </div><button class="labyrinth_back laby_button">미궁 처음으로 가기</button></div>
 </body>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="../../js/table.js"></script>
-<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../js/labyrinth/back.js"></script>
 </html>

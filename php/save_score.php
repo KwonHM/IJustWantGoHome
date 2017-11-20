@@ -5,15 +5,29 @@ $name = $_POST['user_name'];
 $Difficulty = $_POST['difficulty'];
 $Genre = $_POST['Genre'];
 $date = date("Y-m-d");
+$identipication = $_SERVER['REMOTE_ADDR'];
+$key = "iwantgohome";
 
-$sql = 'insert into score_board(U_number,Genre,user_name,Difficulty,achieve_date) values(null, "'.$Genre.'", "'.$name.'", "'.$Difficulty.'", "'.$date.'")';
+
+$chk = 'select * from score_board where AES_DECRYPT(UNHEX(user_ip), "'.$key.'") as user_ip ='.$identipication;
+$result = $db->query($chk);
+$row = mysqli_fetch_assoc($result);
+
+if($identipication == $row['user_ip'] && $Genre == $row['Genre']) {
+	echo "등록은 한번 밖에 하실 수 없습니다.";
+	return;
+}
+
+$sql = 'insert into score_board(U_number,Genre,user_name,Difficulty,achieve_date,user_ip) values(null, "'.$Genre.'", "'.$name.'", "'.$Difficulty.'", "'.$date.'", HEX(AES_ENCRYPT("'.$identipication.'","'.$key.'")))';
 $result = $db->query($sql);
+
+
 
 if($result) {
 	$U_number = $db->insert_id;
 	echo 1;
 	return;
-}else{
+}	else{
 	echo "문제가 발생하였습니다.";
 	return;
 }
