@@ -20,8 +20,6 @@ require_once('dbconfig.php');
 <meta charset="utf-8">
 <head>
 	<title>명예의 전당</title>
-	<link rel="stylesheet" href="../style/table.css">
-	<link rel="stylesheet" href="../style/labyrinth.css">
 </head>
 <body>
 <section>

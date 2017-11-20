@@ -8,6 +8,7 @@
     <title>labyrinth:anime-ending</title>
     <link rel= "stylesheet" type="text/css" href="../../style/font.css">
     <link rel= "stylesheet" type="text/css" href="../../style/labyrinth.css">    
+    <link rel= "stylesheet" type="text/css" href="../../style/table.css">    
 </head>
 <body>
     <div class="wrap winner_winner_chicken_dinner"><h1>이겼닭! 오늘 저녁은 치킨이닭!</h1></div>
@@ -23,11 +24,13 @@
             <input type="text" name="user_name" maxlength="20" placeholder="이름">
             <input type="button" class="laby_button" onclick="save_score();" value="저장하기!">
         </form>
+        <?php include('../../php/leader_board.php');?>
     </div>   
     <button class="anime_back laby_button">처음으로</button>
     <button class="anime_hard laby_button">하드모드로</button>
 </body>
 <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../js/labyrinth/back.js"></script>
+
 
 </html>
