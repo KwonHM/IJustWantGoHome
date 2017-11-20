@@ -44,4 +44,8 @@ $(document).ready(function() {
         $('.hint').show();
     });
 
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 0928f605f9de8809915735df050fe006dd78221a

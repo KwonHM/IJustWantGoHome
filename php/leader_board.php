@@ -87,7 +87,11 @@ require_once('dbconfig.php');
 </div><button class="labyrinth_back laby_button">미궁 처음으로 가기</button></div>
 </body>
 <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<<<<<<< HEAD
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="../../js/table.js"></script>
+=======
+<script type="text/javascript" src="../../js/table.js"></script>
+>>>>>>> 0928f605f9de8809915735df050fe006dd78221a
 <script type="text/javascript" src="../js/labyrinth/back.js"></script>
 </html>
