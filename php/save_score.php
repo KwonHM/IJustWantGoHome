@@ -9,11 +9,12 @@ $identipication = $_SERVER['REMOTE_ADDR'];
 $key = "iwantgohome";
 
 
-$chk = 'select * from score_board where AES_DECRYPT(UNHEX(user_ip), "'.$key.'") as user_ip ='.$identipication;
+$chk = 'SELECT * FROM score_board WHERE user_ip = HEX(AES_ENCRYPT("'.$identipication.'","'.$key.'"))';
 $result = $db->query($chk);
 $row = mysqli_fetch_assoc($result);
 
-if($identipication == $row['user_ip'] && $Genre == $row['Genre']) {
+
+if(strlen($row['user_ip']) != 0 && $Genre == $row['Genre'] && $Difficulty == $row['Difficulty']) {
 	echo "등록은 한번 밖에 하실 수 없습니다.";
 	return;
 }

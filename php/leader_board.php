@@ -84,7 +84,6 @@ require_once('dbconfig.php');
 		</table>
 	</div>
 </section>
-</div><button class="labyrinth_back laby_button">미궁 처음으로 가기</button></div>
 </body>
 <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../js/table.js"></script>
