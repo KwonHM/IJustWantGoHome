@@ -11,6 +11,10 @@ $(document).ready(function() {
         location.href = './index.html';
     });
     
+    $('.anime_hard_back').click(function() {
+        location.href = './start.html';
+    });
+
     $('.idolmaster_back').click(function() {
         location.href = './start.html';
     });
