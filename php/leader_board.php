@@ -4,7 +4,7 @@ require_once('dbconfig.php');
 	$P_record = 10;
 	$P_block = 5; 	
 
-	$sql = 'SELECT count(*) from member';
+	$sql = 'SELECT count(*) from score_board';
 	$result = $db->query($sql); 
 	$row = mysqli_fetch_assoc($result);
 
@@ -22,6 +22,7 @@ require_once('dbconfig.php');
 	<title>명예의 전당</title>
 	<link rel= "stylesheet" type="text/css" href="../style/font.css">
     <link rel= "stylesheet" type="text/css" href="../style/table.css"> 
+    <link rel= "stylesheet" type="text/css" href="../style/leaderboard.css">
 </head>
 <body>
 <section>
@@ -40,8 +41,11 @@ require_once('dbconfig.php');
 	</table>
 	</div>
 	<div class="tbl-content">
+	<h2 class="noplayer" align="center">아직 올클리어 한 사람이 없어요! 
+			빨리 클리어해서 1등을 등록해 보셔요!</h2>
     <table cellpadding="0" cellspacing="0" border="0">		
 		<tbody>
+
 			<?php
 				
 				$P_point = ($N_Page-1) * $P_record;
@@ -90,4 +94,16 @@ require_once('dbconfig.php');
 <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../js/table.js"></script>
 <script type="text/javascript" src="../js/labyrinth/back.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() { 
+<?php 
+	if($T_record < 1) {
+	?>
+	$(".noplayer").show();
+	<?php
+	}	
+?>
+});
+
+</script>
 </html>

@@ -1,5 +1,14 @@
 $(document).ready(function() {
     $('#saveinfo').submit(save_score);
+
+<?php 
+    if($T_record < 1) {
+    ?>
+    $(".noplayer").show();
+    <?php
+    }   
+?>
+
 });
 
 function save_score() { 
