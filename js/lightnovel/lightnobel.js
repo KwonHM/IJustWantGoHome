@@ -18,4 +18,9 @@ $(document).ready(function () {
 	$('#addNovelTitle').click(function () {
 		addNovelTitle();
 	});
+	$("body").keydown(function (key) {
+			   if(key.keyCode == 13){
+				   addNovelTitle();
+			   }
+	});
 });
