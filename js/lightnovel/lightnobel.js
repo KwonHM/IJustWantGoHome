@@ -6,10 +6,10 @@ var word4 = ["이야기", "뿐인 이야기", "뿐인 것", "그런 이야기", 
 function addNovelTitle() {
 	var result = [];
 	
-	result[0] = word1[Math.floor(Math.random() * 5)];
-	result[1] = word2[Math.floor(Math.random() * 5)];
-	result[2] = word3[Math.floor(Math.random() * 5)];
-	result[3] = word4[Math.floor(Math.random() * 5)];
+	result[0] = word1[Math.floor(Math.random() * word1.length)];
+	result[1] = word2[Math.floor(Math.random() * word2.length)];
+	result[2] = word3[Math.floor(Math.random() * word3.length)];
+	result[3] = word4[Math.floor(Math.random() * word4.length)];
 	
 	alert(result[0] + " " + result[1] + " " + result[2] + " " + result[3]);
 }
