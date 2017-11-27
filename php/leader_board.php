@@ -10,8 +10,8 @@ require_once('dbconfig.php');
 
 	$N_Page = ($_GET['page'])?$_GET['page']:1;	
 	$T_record = $row['count(*)'];
-	$Genre = $_POST['Genre'];
-	$Genre = 'anime';
+	
+
 
 	
 ?>
