@@ -10,22 +10,29 @@
     <link rel= "stylesheet" type="text/css" href="../style/popup.css">
     <title>Welcome to Labyrinth</title>
     <script type="text/javascript">
-        if(window.addEventListener){
+        if(window.addEventListener)
+        {
             var kkeys=[],konami='38,38,40,40,37,39,37,39,66,65';
-            window.addEventListener('keydown',function(e){
-                kkeys.push(e.keyCode);
-                if(kkeys.toString().indexOf(konami)>=0)
-            {
-                window.location='sakuma_mayu.html';
-            }
+            window.addEventListener('keydown',function(e)
+                {
+                   kkeys.push(e.keyCode);
+                   if(kkeys.toString().indexOf(konami)>=0)
+                    {
+                        window.location='sakuma_mayu.html';
+                    }
                 }
-                ,true);}
-                if ( (event.ctrlKey == true && ( event.keyCode == 78 || event.keyCode == 76 || event.keyCode == 82 )) || event.keyCode == 116) {
-                 event.keyCode = 0;
-                 event.cancelBubble = true;
-                 event.returnValue = false;
-                 alert('그런데 쨔잔');
-      }
+                ,true);
+        }
+            if(window.addEventListener)
+            {
+                if(window.addEventListener(event.ctrlKey == true && ( event.keyCode == 78 || event.keyCode == 76 || event.keyCode == 82 )) || event.keyCode == 116) 
+                {
+                   alert('그런데 쨔잔');
+                   event.keyCode = 0;
+                   event.cancelBubble = true;
+                   event.returnValue = false;
+                }
+            }
         </script>
 </head>
 <body>
