@@ -13,6 +13,7 @@
         if(window.addEventListener)
         {
             var kkeys=[],konami='38,38,40,40,37,39,37,39,66,65';
+            var lkeys=[],serogochim='116';
             window.addEventListener('keydown',function(e)
                 {
                    kkeys.push(e.keyCode);
@@ -20,37 +21,16 @@
                     {
                         window.location='sakuma_mayu.html';
                     }
-                }
-                ,true);
-        }
-        if(window.addEventListener)
-        {
-            var kkeys=[],saerogochim='116';
-            window.addEventListener('keydown',function(e)
-                {
-                   kkeys.push(e.keyCode);
-                   if(kkeys.toString().indexOf(saerogochim)>=0)
+                    else(lkeys.toString().indexOf(serogochim)>=0)
                     {
                         event.cancelBubble=true;
                         event.returnValue=false;
                         alert('그런데 쨔잔!');
-                        event.keyCode=0;
+                        event.keycode=0;
                     }
                 }
                 ,true);
         }
-        /*
-            if(window.addEventListener)
-            {
-                if(window.addEventListener(event.keyCode == 116))
-                {
-                   alert('그런데 쨔잔');
-                   event.keyCode = 0;
-                   event.cancelBubble = true;
-                   event.returnValue = false;
-                }
-            }
-            */
         </script>
 </head>
 <body>
