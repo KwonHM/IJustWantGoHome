@@ -12,6 +12,12 @@
     del{
         color: gray;
     }
+   whitelight {
+	text-shadow: 0 0 2px #ffffff;
+	-moz-text-shadow: 0 0 2px #ffffff;
+	-webkit-text-shadow: 0 0 2px #ffffff;
+    color: white;
+    }
     </style>
 </head>
 <body>
@@ -28,7 +34,7 @@
         <del><p>8. 보류이유이름의 Editable값을 무조건 1로 주기.</p></del>
         <p>9. 할인-제외이유Name값이 할인-제외이유의 Code값과 상관없이 저장이나 재조회 했을 경우 Editable값이 0이 되는 것 수정.</p>
         <del><p>10. Combo(SelectBox)값이 Null일경우 지불보류, 보류이유 Name값 삭제.</p></del>
-        <p>11. 저장이나 재조회 했을 경우 Edit값이 1로 무조건 변경되는 버그를 OnRowSearchEnd에 적용해보기.</p>
+        <whitelight><p>11. 저장이나 재조회 했을 경우 Edit값이 1로 무조건 변경되는 버그를 OnRowSearchEnd에 적용해보기.</p></whitelight>
         <del><p>12. 지불보류/보류금액에서 오류메세지가 떴을 경우 지불보류이유가 삭제되는 오류 찾아서 수정하기.</p></del>
         <del><p>13. MaxLength 8자리 셋팅과 0값 채워주기를 발주번호에도 적용.</p></del>
         <del><p>14. 지불마감일의 Width값 줄이기.</p></del>
