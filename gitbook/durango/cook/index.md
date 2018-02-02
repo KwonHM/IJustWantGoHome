@@ -2,7 +2,7 @@
 요리에 관련된 문서. 종류나 뭐 설명이나 성능이나 그런거 
 
 1. [요리 테스트](cook_test.md)
-    1. [끓이는 요리](cook_test.md)
+    1. [끓이는 요리](cook_test.md#이건-안제목임)
     2. [로컬 음식](cook_test.md)
     3. [볶음 요리, 유제품, 소스 만들기](cook_test.md)
     4. [구이 요리, 튀김 요리](cook_test.md)
