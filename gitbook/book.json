@@ -1,4 +1,7 @@
 {
+    "structure": {
+        "readme": "index.md"
+    },
     "plugins": ["theme-api"],
     "pluginsConfig": {
         "theme-api": {
