@@ -1,7 +1,6 @@
-# Summary
-
-* [Introduction](README.md)
+# IJWGH 문서
+* []()
 
 ## 듀랑고
 
-* [요리](/function/cook_index.md)
+* [요리](/durango/cook/index.md)
