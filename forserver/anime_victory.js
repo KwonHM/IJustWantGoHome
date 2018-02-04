@@ -1,12 +1,13 @@
 $(document).ready(function() {
     $('#saveinfo').submit(save_score);
+    
 });
 
 function save_score() { 
     if(document.saveinfo.user_name.value.length == 0){
         alert('이름을 입력해 주세요.');
         event.preventDefault();
-    } 
+    } else {
     $.ajax({
         url:'../../php/save_score.php',
         type:'post',
@@ -19,4 +20,5 @@ function save_score() {
             alert(data);
         }
     })
-} 
+    }    
+}
